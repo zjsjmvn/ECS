@@ -62,7 +62,7 @@ export class HelloEntity extends ecs.Entity {
 entity.add(HelloComponent); // 添加组件时会优先从组件缓存池中获取无用的组件对象，如果没有才会新创建一个组件对象
 ```
 
-- 添加组件对象：注意，外部创建的组件对象ecs系统不负责回收，需要用户自己管理该组件对象的声明周期。
+- 添加组件对象：注意，外部创建的组件对象ecs系统不负责回收，需要用户自己管理该组件对象的生命周期。
 ```Typescript
 let compObj = new HelloComponent();
 entity.add(compObj)
